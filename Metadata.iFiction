@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>6B44E8AB-A789-46E3-96F7-96B48C1A6CC1</ifid>
+            <format>glulx</format>
+        </identification>
+        <bibliographic>
+            <title>Reincarnated</title>
+            <author>Redhead Kitsune</author>
+            <headline>A story of an ordinary person in a very unusual situation,</headline>
+            <genre>Roguelike RPG</genre>
+            <firstpublished>2017</firstpublished>
+            <description>After being killed, a person from our world wakes up in another world, in another body...</description>
+            <language>en</language>
+            <group>Inform</group>
+        </bibliographic>
+        <releases>
+            <attached>
+                <release>
+                    <releasedate>2017-01-31</releasedate>
+                    <version>1</version>
+                    <compiler>Inform 7</compiler>
+                    <compilerversion>6M62</compilerversion>
+                </release>
+            </attached>
+        </releases>
+        <colophon>
+            <generator>Inform 7</generator>
+            <generatorversion>6M62</generatorversion>
+            <originated>2017-01-31</originated>
+        </colophon>
+        <glulx>
+            <serial>170131</serial>
+            <release>1</release>
+            <compiler>Inform 7 build 6M62</compiler>
+        </glulx>
+    </story>
+</ifindex>
