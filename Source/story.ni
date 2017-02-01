@@ -38,11 +38,24 @@ To decide which number is roll of (dr - a die roll):
 	end if;
 	decide on the total.
 
-To decide which die roll is the die roll add (drA - a die roll) and (drB - a die roll):
+To decide which die roll is add (drA - a die roll) and (drB - a die roll):
 	decide on die roll with dice part (dice part of drA + dice part of drB) sides part (sides part of drA + sides part of drB) adds part (adds part of drA + adds part of drB).
 
-To decide which die roll is the die roll substract of (drA - a die roll) and (drB - a die roll):
+To decide which die roll is substract (drA - a die roll) and (drB - a die roll):
 	decide on die roll with dice part (dice part of drA - dice part of drB) sides part (sides part of drA - sides part of drB) adds part (adds part of drA - adds part of drB).
+
+To decide whether (drA - a die roll) is larger than (drB - a die roll):
+	if sides part of drA > sides part of drB, decide on true;
+	if sides part of drA equals sides part of drB:
+		if dice part of drA > dice part of drB, decide on true;		
+	if sides part of drA equals sides part of drB:
+		if dice part of drA equals dice part of drB:
+			if adds part of drA is greater than adds part of drB, decide on true;	
+	decide on false.	
+
+To decide which die roll is largest between (drA - a die roll) and (drB - a die roll):
+	if drA is larger than drB, decide on drA;
+	otherwise decide on drB.
 
 To decide which number is the roll of summary between (drA - a die roll) and (drB - a die roll):
 	let summary roll be die roll with dice part (dice part of drA + dice part of drB) sides part (sides part of drA + sides part of drB) adds part (adds part of drA + adds part of drB);
@@ -173,7 +186,6 @@ skill name	parent attribute	skill description
 "intimidation"	"Charisma"	"Using physical presence, verbal threats and fear to influence others."	
 "speechcraft"	"Charisma"	"Ability to influence others through bribery, discussion and debate."	
 
-
 A person has a die roll called alteration. Alteration of a person is usually 0d6.
 A person has a die roll called apportation. Apportation of a person is usually 0d6.
 A person has a die roll called premonition. Premonition of a person is usually 0d6.
@@ -195,6 +207,8 @@ priest school name	priest school description
 "divination"	"Requesting divine aid to gain knowledge of the past, present, or future."	
 "favor"	"Requesting divine aid to help, improve, heal, or benefit someone or something."	
 "strife"	"Requesting divine aid to cause injury or destruction."
+
+[TODO: add 'phrase' (function) that determines the effective skill die roll]
 
 Section 4 - Factions and Player Relationship
 
@@ -346,12 +360,15 @@ The acumen of a elf man is usually 3d6.
 The charisma of a elf man is usually 3d6+1.
 The coordination of a elf man is usually 3d6.
 
+The dodge of a elf man is usually 3d6+2.
+The melee combat of a elf man is usually 3d6+2.
+The stealth of a elf man is usually 3d6+3.
 The marksmanship of a elf man is usually 4d6.
 The running of a elf man is usually 2d6+2.
 The reading/writing of a elf man is usually 3d6+1.
 The speechcraft of a elf man is usually 3d6+1.
-The hide of a elf man is usually 3d6+2.
-The search of a elf man is usually 3d6+2.
+The hide of a elf man is usually 3d6+3.
+The search of a elf man is usually 3d6+3.
 The survival of a elf man is usually 3d6+2.
 The tracking of a elf man is usually 3d6+2.
 The charm of a elf man is usually 3d6+1.
@@ -373,15 +390,18 @@ The physique of a elf woman is usually 2d6.
 The stamina of a elf woman is usually 4d6.
 The intellect of a elf woman is usually 3d6.
 The acumen of a elf woman is usually 3d6.
-The charisma of a elf woman is usually 3d6+1.
+The charisma of a elf woman is usually 3d6+3.
 The coordination of a elf woman is usually 3d6.
 
+The dodge of a elf woman is usually 3d6+2.
+The melee combat of a elf woman is usually 3d6+2.
+The stealth of a elf woman is usually 3d6+3.
 The marksmanship of a elf woman is usually 4d6.
 The running of a elf woman is usually 2d6+2.
 The reading/writing of a elf woman is usually 3d6+1.
 The speechcraft of a elf woman is usually 3d6+1.
-The hide of a elf woman is usually 3d6+2.
-The search of a elf woman is usually 3d6+2.
+The hide of a elf woman is usually 3d6+3.
+The search of a elf woman is usually 3d6+3.
 The survival of a elf woman is usually 3d6+2.
 The tracking of a elf woman is usually 3d6+2.
 The charm of a elf woman is usually 3d6+3.
@@ -396,6 +416,10 @@ A damage resistance modifier is usually -3.
 The move of a elf woman is usually 10.
 The body points of a elf woman is usually 17.
 The wounds of a elf woman is usually 4.
+
+Section 4 - Player only variables
+
+[A player has a number called pride. Pride of player is usually 100.0 .]
 
 Book 2 - The World
 
